@@ -4,7 +4,6 @@ using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartup(typeof(signal.Startup))]
-
 namespace signal
 {
     public class Startup

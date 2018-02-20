@@ -1,7 +1,15 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{ 
+
+    ViewBag.title = "Index";
 }
 
-<h2>Index</h2>
+<label>Group:</label>
+<select id="group">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+</select>
+<button id="subscribe">Subscribe</button>
+<button id="send" style="display: none">Say Hello!</button>
+<ul id="messages"></ul>
 
