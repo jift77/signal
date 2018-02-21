@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
+using signal.PersistentCon;
 
 [assembly: OwinStartup(typeof(signal.Startup))]
 namespace signal
@@ -11,6 +12,7 @@ namespace signal
         public void Configuration(IAppBuilder app)
         {
             app.MapSignalR();
+            app.MapSignalR<EchoConnection>("/echo");
         }
     }
 }

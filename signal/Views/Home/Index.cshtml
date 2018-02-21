@@ -1,15 +1,33 @@
-﻿@{ 
-
+﻿@{
     ViewBag.title = "Index";
 }
 
-<label>Group:</label>
-<select id="group">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-</select>
-<button id="subscribe">Subscribe</button>
-<button id="send" style="display: none">Say Hello!</button>
-<ul id="messages"></ul>
-
+@section Scripts{
+    @*<script src="~/Scripts/signal/GroupHub.js"></script>*@
+    @*<script src="~/Scripts/signal/ExcludeHub.js"></script>*@
+    <script src="~/Scripts/signal/Persistent.js"></script>
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Groups
+    </div>
+    <div class="panel-body">
+        @Html.Partial("GroupHub")
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Exclude
+    </div>
+    <div class="panel-body">
+        @Html.Partial("ExcludeHub")
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Persistent Connection
+    </div>
+    <div class="panel-body">
+        @Html.Partial("Persistent")
+    </div>
+</div>

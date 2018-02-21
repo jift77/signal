@@ -138,7 +138,9 @@
     <Content Include="Scripts\jquery.signalR-2.2.2.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\signal\hubs.js" />
+    <Content Include="Scripts\signal\ExcludeHub.js" />
+    <Content Include="Scripts\signal\GroupHub.js" />
+    <Content Include="Scripts\signal\Persistent.js" />
     <Content Include="Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -148,11 +150,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="EchoHub.cs" />
+    <Compile Include="Hubs\EchoHub.cs" />
+    <Compile Include="Hubs\ExcludeHub.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="GroupsHub.cs" />
+    <Compile Include="Hubs\GroupsHub.cs" />
+    <Compile Include="PersistentCon\EchoConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -161,6 +165,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Home\GroupHub.cshtml" />
+    <Content Include="Views\Home\ExcludeHub.cshtml" />
+    <Content Include="Views\Home\Persistent.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
